@@ -1,0 +1,29 @@
+*{
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+tr{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    margin: 20px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker_Board</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesheet.css')}}">
+</head>
+<body>
+    <h1 style="background-color: {{color_1}}; color: {{color_2}};">***Checkers***</h1>
+    <table>
+        <tbody>
+            {%for x in range (row)%}
+                {% if x % 2 == 0 %}
+                    <tr>
+                        {%for y in range (col)%}
+                        {% if y % 2 == 0 %}
+                            <td style="background-color: {{color_1}};"></td>
+                        {%else%}
+                            <td style="background-color: {{color_2}};"></td>
+                        {%endif%}
+                        {%endfor%}
+                    </tr>
+                {%else%}
+                    <tr>
+                        {%for y in range (col)%}
+                            {% if y % 2 == 0 %}
+                                <td style="background-color: {{color_2}};"></td>
+                            {%else%}
+                                <td style="background-color: {{color_1}};"></td>
+                            {%endif%}
+                        {%endfor%}
+                    </tr>
+                {%endif%}
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
